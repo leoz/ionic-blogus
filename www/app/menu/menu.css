@@ -9,6 +9,10 @@
     top: 8px !important;
 }
 
+.menu-icon-tab {
+    padding-top: 4px;
+}
+
 .menu-header {
     padding: 0 !important;
     border: 0 !important;

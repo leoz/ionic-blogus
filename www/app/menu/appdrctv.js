@@ -2,12 +2,10 @@
 angular.module('AppDrctv', [])
 
 .directive('navClear', [
-    '$ionicViewService',
-    '$state',
-    '$location',
+    '$ionicHistory',
     '$window',
     '$rootScope',
-    function($ionicHistory, $location, $state, $window, $rootScope) {
+    function($ionicHistory, $window, $rootScope) {
         $rootScope.$on('$stateChangeError', function() {
             $ionicHistory.nextViewOptions(null);
         });
