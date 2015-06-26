@@ -1,0 +1,2 @@
+# blogus
+Blogus LiveJournal client
