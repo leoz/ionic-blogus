@@ -1,0 +1,32 @@
+
+/* Messages */
+
+.tabs-messages .tab-item.tab-item-active,
+.tabs-messages .tab-item.active,
+.tabs-messages .tab-item.activated {
+    color: #444444 !important;
+}
+
+.email-flag-button {
+    margin-top: 12px !important;
+    padding: 0 !important;
+}
+
+.email-delete-button {
+    padding-left: 4px !important;
+}
+
+.email-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.email-text {
+    font-size: smaller !important;
+    color: grey !important;
+}
+
+.email-body-text {
+    font-size: smaller !important;
+}
+

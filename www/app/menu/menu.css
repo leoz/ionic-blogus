@@ -1,0 +1,39 @@
+
+/* Menu */
+
+.menu-icon-avatar {
+    border-radius: 100% !important;
+    width: 36px !important;
+    height: 36px !important;
+    left: 8px !important;
+    top: 8px !important;
+}
+
+.menu-header {
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+.menu-header-anon {
+    height: 52px !important;
+}
+
+.menu-header-auth {
+    height: 106px !important;
+}
+
+.menu-list-anon {
+    top: 97px !important;
+    /* menu-header-anon.height + 44 + 1 */
+}
+
+.menu-list-auth {
+    top: 149px !important;
+    /* menu-header-auth.height + 44 + 1 */
+}
+
+.menu-tabs {
+    height: 54px !important;
+    width: auto !important;
+}
+
