@@ -1,0 +1,9 @@
+<ion-header-bar class="item-input-inset">
+    <button class="main-bar-button-left button button-icon icon ion-ios-plus-outline"></button>
+    <div class="item-input-wrapper">
+        <i class="icon ion-ios-search-strong"></i>
+        <input type="search" placeholder="Journal" ng-model="search.value">
+        <i ng-if="search.value.length > 0" ng-click="search.value = '';" class="icon ion-close"></i>
+    </div>
+    <button class="main-bar-button-right button button-icon icon ion-ios-arrow-thin-right"></button>
+</ion-header-bar>

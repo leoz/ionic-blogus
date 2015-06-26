@@ -1,6 +1,16 @@
 
 /* Menu */
 
+.main-bar-button-left {
+     padding-left: 1px !important;
+     padding-right: 11px !important;
+}
+
+.main-bar-button-right {
+     padding-left: 2px !important;
+     padding-right: 2px !important;
+}
+
 .menu-icon-avatar {
     border-radius: 100% !important;
     width: 36px !important;
