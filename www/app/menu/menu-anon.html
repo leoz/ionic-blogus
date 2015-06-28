@@ -2,7 +2,15 @@
     <div ng-include="'app/menu/menu-bar.html'"></div>
     <ion-header-bar class="menu-header menu-header-anon bar-subheader">
         <ion-item class="item-icon-left" ng-click="auth.logged_in = true" href="#/app/tab/journal/{{conf.current}}">
-            <i class="icon ion-log-in"></i>Login</ion-item>
+            <i class="icon ion-log-in"></i>Login
+        </ion-item>
+        <ion-item class="main-list-title item item-input-inset">
+            <button class="main-list-button button button-icon" ng-click="main.show_delete = !main.show_delete">
+                <i class="icon ion-ios-minus-outline"></i>
+            </button>
+            <div class="main-list-text">Bookmarks</div>
+            <div class="main-list-badge badge badge-positive">{{bookmarks.length}}</div>
+        </ion-item>        
     </ion-header-bar>
     <div ng-include="'app/bookmarks/menu-bookmarks.html'"></div>
 </ion-view>
