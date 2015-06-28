@@ -33,7 +33,7 @@
 }
 
 .menu-header-auth {
-    height: 106px !important;
+    height: 160px !important;
 }
 
 .menu-list-anon {
@@ -42,7 +42,7 @@
 }
 
 .menu-list-auth {
-    top: 149px !important;
+    top: 203px !important;
     /* menu-header-auth.height + 44 + 1 */
 }
 
@@ -51,3 +51,15 @@
     width: auto !important;
 }
 
+.main-list-title {
+     height: 54px !important;
+}
+
+.main-list-button {
+     padding-left: 1px !important;
+     padding-right: 16px !important;
+}
+
+.main-list-text {
+     width: 100% !important;
+}

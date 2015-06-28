@@ -17,6 +17,27 @@
                     </i> Groups
                 </a>
         </ion-item>
+        
+        
+          <ion-item class="main-list-title item-input-inset">
+               <button class="main-list-button button button-icon" ng-click="main.show_delete = !main.show_delete">
+                    <i class="icon ion-ios-minus-outline"></i>
+               </button>
+               <div class="main-list-text" ng-switch="main.show_list">
+                    <div ng-switch-when="bookmarks">Bookmarks</div>
+                    <div ng-switch-when="friends">Friends</div>
+                    <div ng-switch-when="groups">Groups</div>
+                    <div ng-switch-default>none</div>
+               </div>
+               <div class="main-list-badge badge badge-positive" ng-switch="main.show_list">
+                    <div ng-switch-when="bookmarks">{{bookmarks.length}}</div>
+                    <div ng-switch-when="friends">{{friends.length}}</div>
+                    <div ng-switch-when="groups">{{groups.length}}</div>
+                    <div ng-switch-default>0</div>
+               </div>
+          </ion-item>        
+        
+        
     </ion-header-bar>
     <div ng-show="main.show_list === 'bookmarks'" ng-include="'app/bookmarks/menu-bookmarks.html'"></div>
     <div ng-show="main.show_list === 'friends'" ng-include="'app/friends/menu-friends.html'"></div>
