@@ -63,3 +63,21 @@
 .main-list-text {
      width: 100% !important;
 }
+
+.main-footer-bar {
+     height: 22px !important;
+     padding-top: 0 !important;
+     padding-bottom: 0 !important;
+}
+
+.main-footer-text-left {
+     width: 100%;
+     font-weight: bold;
+     text-align: left;
+}
+
+.main-footer-text-right {
+     width: 100%;
+     font-weight: bold;
+     text-align: right;
+}

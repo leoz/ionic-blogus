@@ -1,5 +1,5 @@
 <ion-view>
-    <div ng-include="'app/menu/menu-bar.html'"></div>
+    <div ng-include="'app/menu/menu-header.html'"></div>
     <ion-header-bar class="menu-header menu-header-auth bar-subheader">
         <ion-item class="item-icon-left" ng-click="auth.logged_in = false" href="#/app/journal/{{conf.current}}">
             <i class="icon ion-log-out"></i>Logout</ion-item>
@@ -38,4 +38,5 @@
     <div ng-show="main.show_list === 'bookmarks'" ng-include="'app/bookmarks/menu-bookmarks.html'"></div>
     <div ng-show="main.show_list === 'friends'" ng-include="'app/friends/menu-friends.html'"></div>
     <div ng-show="main.show_list === 'groups'" ng-include="'app/groups/menu-groups.html'"></div>
+    <div ng-include="'app/menu/menu-footer.html'"></div>
 </ion-view>

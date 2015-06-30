@@ -1,5 +1,5 @@
 <ion-view>
-    <div ng-include="'app/menu/menu-bar.html'"></div>
+    <div ng-include="'app/menu/menu-header.html'"></div>
     <ion-header-bar class="menu-header menu-header-anon bar-subheader">
         <ion-item class="item-icon-left" ng-click="auth.logged_in = true" href="#/app/tab/journal/{{conf.current}}">
             <i class="icon ion-log-in"></i>Login
@@ -13,4 +13,5 @@
         </ion-item>        
     </ion-header-bar>
     <div ng-include="'app/bookmarks/menu-bookmarks.html'"></div>
+    <div ng-include="'app/menu/menu-footer.html'"></div>
 </ion-view>
