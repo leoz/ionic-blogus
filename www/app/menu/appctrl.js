@@ -17,5 +17,9 @@ angular.module('AppCtrl', [])
     });
     $scope.auth = AuthService;
     $scope.conf = ConfService;
+    $scope.user = {
+        name: 'Marty McFly',
+        icon: 'http://ionicframework.com/img/docs/mcfly.jpg'
+    }
 });
 

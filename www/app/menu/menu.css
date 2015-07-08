@@ -33,7 +33,7 @@
 }
 
 .menu-header-auth {
-    height: 159px !important;
+    height: 213px !important;
 }
 
 .menu-list-anon {
@@ -42,7 +42,7 @@
 }
 
 .menu-list-auth {
-    top: 202px !important;
+    top: 257px !important;
     /* menu-header-auth.height + 44 + 1 */
 }
 
