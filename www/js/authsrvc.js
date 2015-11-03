@@ -2,6 +2,6 @@
 angular.module('AuthSrvc', [])
 
 .service('AuthService', function() {
-    this.logged_in = true;
+    this.logged_in = false;
 });
 
