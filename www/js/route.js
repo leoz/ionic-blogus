@@ -203,7 +203,7 @@ angular.module('MainRoute', [])
         var path = '/app/journal/';
         var cs = $injector.get('ConfService');
         var as = $injector.get('AuthService');
-        if (as.logged_in) {
+        if (as.get_logged_in()) {
             path = '/app/tab/journal/';
         }
         $location.path(path + cs.current);

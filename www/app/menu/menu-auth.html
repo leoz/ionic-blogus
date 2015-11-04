@@ -1,7 +1,7 @@
 <ion-view>
     <div ng-include="'app/menu/menu-header.html'"></div>
     <ion-header-bar class="menu-header menu-header-auth bar-subheader">
-        <ion-item class="item-icon-left" ng-click="auth.logged_in = false" href="#/app/journal/{{conf.current}}">
+        <ion-item class="item-icon-left" ng-click="auth.set_logged_in(false)" href="#/app/journal/{{conf.current}}">
             <i class="icon ion-log-out"></i>Logout</ion-item>
         <ion-item class="item-icon-left" href="#" ng-click="">
             <img class="icon menu-icon-avatar" ng-src="{{user.icon}}">{{user.name}}
