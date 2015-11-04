@@ -1,5 +1,6 @@
-angular.module('ionicApp', ['ionic',
-    'ConfSrvc', 'AuthSrvc', 'UserSrvc', 'MainRoute', 'AppCtrl', 'AppDrctv', 'MenuCtrl',
+angular.module('ionicApp', ['ionic', 'ngLiveJournal',
+    'AuthSrvc', 'AvatarSrvc', 'ConfSrvc', 'StorageSrvc', 'TextSrvc', 'UserSrvc',
+    'MainRoute', 'AppCtrl', 'AppDrctv', 'MenuCtrl',
     'FeedCtrl', 'PostCtrl', 'FriendsFeedCtrl', 'FavouritesCtrl',
     'MessagesSrvc', 'MessagesCtrl', 'MessageListCtrl', 'MessageViewCtrl' ])
 
