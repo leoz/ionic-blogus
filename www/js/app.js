@@ -9,8 +9,9 @@ angular.module('ionicApp', ['ionic', 'ngLiveJournal',
     'FeedCtrl', 'PostCtrl', 'FriendsFeedCtrl', 'FavouritesCtrl',
     'MessagesSrvc', 'MessagesCtrl', 'MessageListCtrl', 'MessageViewCtrl' ])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, ngLJService) {
   $ionicPlatform.ready(function() {
+    ngLJService.set_config(false);
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -21,6 +22,10 @@ angular.module('ionicApp', ['ionic', 'ngLiveJournal',
       StatusBar.styleLightContent();
     }
   });
-});
-
-
+})
+.config(['$compileProvider', '$ionicConfigProvider', '$logProvider',
+    function ($compileProvider, $ionicConfigProvider, $logProvider) {
+    $compileProvider.debugInfoEnabled(false);
+    $ionicConfigProvider.backButton.previousTitleText(false).text('');
+    $logProvider.debugEnabled(true);
+}]);

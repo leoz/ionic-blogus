@@ -8,7 +8,6 @@ angular.module('FeedCtrl', [])
     $scope.authdata = null;
     $scope.count = 20;
     $scope.date = null;
-    ngLJService.set_config(false);
 
     $scope.title = 'Journal - ' + $scope.journal;
     $scope.mode = 'journal';

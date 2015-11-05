@@ -5,15 +5,12 @@
     <ion-content>
         <ion-refresher on-refresh="doRefresh()"></ion-refresher>
         <ion-list>
-            <ion-item class="item-avatar item-icon-right" collection-repeat="post in posts" item-width="100%" item-height="78px" type="item-text-wrap"
+            <ion-item class="feed-item item-avatar" collection-repeat="post in posts" item-width="100%" item-height="78px" type="item-text-wrap"
             href="#/app{{auth.get_logged_in() ? '/tab' : ''}}/{{mode}}/{{journal}}/{{post.itemid}}">
                 <img ng-src="{{post.$$userpic}}">
+                <i class="icon ion-chatbubble light">{{post.reply_count}}</i>
                 <h2>{{post.$$subject}}</h2>
                 <p><span>{{post.poster}}</span><span style="float: right">{{post.eventtime}}</span></p>
-                <span class="icon feed-count">
-                    <span class="feed-count-icon ion-ios-chatbubble-outline"></span>
-                    <span class="feed-count-num">{{post.reply_count}}</span>
-                </span>
             </ion-item>
         </ion-list>
         <ion-infinite-scroll on-infinite="loadMore()" distance="5%"></ion-infinite-scroll>

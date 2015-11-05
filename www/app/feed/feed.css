@@ -1,25 +1,31 @@
 
-.feed-count {
-	display:block !important;
-	width: 64px !important;
-	height: 100% !important;
-	text-align:center !important;
-	right: 0 !important;
+.feed-item .item-content {
+    //background-color: green !important;
+    padding-right: 10px;
+    height: 77px;
 }
 
-.feed-count span {
-	position: absolute !important;
-	left: 0 !important;
-	right: 0 !important;
-	color: #aaa;
+.ion-chatbubble.light {
+    color: #aaa;
+    -webkit-text-stroke: 0px transparent;
+    font-size: 14px;
+    width: 50px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+
+    display: block;
+    float: right;
+    height: 86px;
 }
 
-.feed-count-icon {
-	margin-top: 11px;
-	font-size: 54px !important;
-}
-
-.feed-count-num {
-	margin-top: 27px;
-	font-size: 16px !important;
+.ion-chatbubble.light::before {
+    color: #fff;
+    text-decoration: none;
+    -webkit-text-stroke: 1px #aaa;
+    position: absolute;
+    font-size: 48px;
+    right: 6px;
+    top: -4px;
+    z-index: -1;
 }
