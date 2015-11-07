@@ -1,33 +1,35 @@
-    <ion-view cache-view="false">
-        <ion-nav-title>{{post.poster}}</ion-nav-title>
-        <ion-content>
-            <div class="list card">
-
-                <div class="item item-avatar">
-                    <img actual-src="{{post.$$userpic}}" ng-src="{{placeholder}}" />
-                    <h2>{{post.$$subject}}</h2>
-                    <p><span>{{post.poster}}</span><span style="float: right">{{post.eventtime}}</span></p>
-                </div>
-
-                <div class="item item-body">
-                    
-                    <pre class="blg-html"
-                        compile="post.$$event"
-                        ng-click="processLink($event)"
-                        images-loaded="imgLoadedEvents">
-                    </pre>
-                    
-                </div>
-
-                <div class="item tabs tabs-secondary tabs-icon-left">
-
-                <span class="icon post-count">
-                    <span class="post-count-icon ion-ios-chatbubble-outline"></span>
-                    <span class="post-count-num">{{post.reply_count}}</span>
-                </span>
-
-                </div>
-
+<ion-view cache-view="false">
+    <ion-nav-title>{{post.poster}}</ion-nav-title>
+    <ion-content>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img actual-src="{{post.$$userpic}}" ng-src="{{placeholder}}" />
+                <h2>{{post.$$subject}}</h2>
+                <p><span>{{post.poster}}</span><span style="float: right">{{post.eventtime}}</span></p>
             </div>
-        </ion-content>
-    </ion-view>
+            <div class="item item-body">
+                <pre class="blg-html"
+                    compile="post.$$event"
+                    ng-click="processLink($event)"
+                    images-loaded="imgLoadedEvents">
+                </pre>
+            </div>
+            <ion-item ng-if="post.props && post.props.taglist" class="item-icon-left">
+                <i class="icon ion-ios-pricetags-outline placeholder-icon"></i>
+                <span>{{post.props.$$taglist}}</span>
+            </ion-item>
+            <ion-item ng-if="post.props && post.props.current_location" class="item-icon-left">
+                <i class="icon ion-ios-location-outline placeholder-icon"></i>
+                <span>{{post.props.$$current_location}}</span>
+            </ion-item>
+            <ion-item ng-if="post.props && post.props.current_mood" class="item-icon-left">
+                <i class="icon ion-happy placeholder-icon"></i>
+                <span>{{post.props.$$current_mood}}</span>
+            </ion-item>
+            <a class="item item-icon-left positive" href="#">
+                <i class="icon ion-ios-chatboxes"></i> Comments
+                <span class="badge badge-positive">{{post.reply_count}}</span>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

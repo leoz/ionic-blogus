@@ -8,26 +8,3 @@
     padding: 20px;
 }
 
-.post-count {
-	display:block !important;
-	width: 64px !important;
-	height: 100% !important;
-	text-align:center !important;
-	right: 0 !important;
-}
-
-.post-count span {
-	position: absolute !important;
-	left: 0 !important;
-	right: 0 !important;
-	color: #aaa;
-}
-
-.post-count-icon {
-	font-size: 54px !important;
-}
-
-.post-count-num {
-	margin-top: 2px;
-	font-size: 16px !important;
-}
