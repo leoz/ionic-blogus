@@ -9,7 +9,7 @@
                 ng-click="bmks.set_active_journal(bookmark.username)"
                 ng-class="{active: bookmark.username == bmks.get_active_journal()}">
                 <img class="icon menu-icon-avatar" ng-src="{{bookmark.$$userpic}}">{{bookmark.username}}
-                <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
+                <ion-delete-button class="ion-minus-circled" ng-click="bmks.delete_journal(bookmark)">
                 </ion-delete-button>
             </ion-item>
         </ion-list>
