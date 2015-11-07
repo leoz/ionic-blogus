@@ -6,7 +6,7 @@
             </ion-nav-buttons>
             <ion-nav-back-button></ion-nav-back-button>
             <ion-nav-buttons side="right">
-                <a class="button button-icon"
+                <a ng-if="conf.show_login" class="button button-icon"
                    ng-class="{'ion-log-out': auth.get_logged_in(), 'ion-log-in': !auth.get_logged_in()}"
                    ng-click="auth.set_logged_in(!auth.get_logged_in())"
                    ng-href="{{ auth.get_logged_in() ? '#/app/tab/journal/' : '#/app/journal/'}}{{conf.current}}">
