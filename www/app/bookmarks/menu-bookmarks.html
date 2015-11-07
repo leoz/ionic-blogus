@@ -2,13 +2,13 @@
     <ion-content ng-class="auth.get_logged_in() ? 'menu-list-auth' : 'menu-list-anon'">
         <ion-list show-delete="main.show_delete">
             <ion-item nav-clear class="item-icon-left"
-                collection-repeat="bookmark in bookmarks"
+                collection-repeat="bookmark in bmks.get_bookmarks()"
                 item-width="100%"
                 item-height="54px"
-                href="#/app{{auth.get_logged_in() ? '/tab' : ''}}/journal/{{bookmark.user.username}}"
-                ng-click="conf.current = bookmark.user.username"
-                ng-class="{active: bookmark.user.username == conf.current}">
-                <img class="icon menu-icon-avatar" ng-src="{{bookmark.user.picture.thumbnail}}">{{bookmark.user.username}}
+                href="#/app{{auth.get_logged_in() ? '/tab' : ''}}/journal/{{bookmark.username}}"
+                ng-click="bmks.set_active_journal(bookmark.username)"
+                ng-class="{active: bookmark.username == bmks.get_active_journal()}">
+                <img class="icon menu-icon-avatar" ng-src="{{bookmark.$$userpic}}">{{bookmark.username}}
                 <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
                 </ion-delete-button>
             </ion-item>
