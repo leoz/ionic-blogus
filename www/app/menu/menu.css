@@ -29,20 +29,20 @@
 }
 
 .menu-header-anon {
-    height: 106px !important;
+    height: 53px !important;
 }
 
 .menu-header-auth {
-    height: 213px !important;
+    height: 159px !important;
 }
 
 .menu-list-anon {
-    top: 149px !important;
+    top: 96px !important;
     /* menu-header-anon.height + 44 + 1 */
 }
 
 .menu-list-auth {
-    top: 257px !important;
+    top: 202px !important;
     /* menu-header-auth.height + 44 + 1 */
 }
 

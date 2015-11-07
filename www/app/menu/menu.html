@@ -1,14 +1,21 @@
-    <ion-side-menus>
-        <ion-side-menu-content>
-            <ion-nav-bar class="bar-positive">
-                <ion-nav-buttons side="left">
-                    <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
-                </ion-nav-buttons>
-                <ion-nav-back-button></ion-nav-back-button>
-            </ion-nav-bar>
-            <ion-nav-view name="menu-content"></ion-nav-view>
-        </ion-side-menu-content>
-        <ion-side-menu side="left" expose-aside-when="(min-width:769px)">
-            <ion-nav-view name="menu-left"></ion-nav-view>
-        </ion-side-menu>
-    </ion-side-menus>
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-nav-bar class="bar-positive">
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+            </ion-nav-buttons>
+            <ion-nav-back-button></ion-nav-back-button>
+            <ion-nav-buttons side="right">
+                <a class="button button-icon"
+                   ng-class="{'ion-log-out': auth.get_logged_in(), 'ion-log-in': !auth.get_logged_in()}"
+                   ng-click="auth.set_logged_in(!auth.get_logged_in())"
+                   ng-href="{{ auth.get_logged_in() ? '#/app/tab/journal/' : '#/app/journal/'}}{{conf.current}}">
+                </a>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+        <ion-nav-view name="menu-content"></ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" expose-aside-when="(min-width:769px)">
+        <ion-nav-view name="menu-left"></ion-nav-view>
+    </ion-side-menu>
+</ion-side-menus>
