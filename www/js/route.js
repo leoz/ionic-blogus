@@ -34,7 +34,8 @@ angular.module('MainRoute', [])
                 controller: 'FeedController'
             },
             'menu-left': {
-                templateUrl: 'app/menu/menu-anon.html'
+                templateUrl: 'app/menu/menu-anon.html',
+                controller: 'MenuController'
             }
         }
     })
