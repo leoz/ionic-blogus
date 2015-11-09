@@ -1,8 +1,16 @@
-<ion-view view-title="Comments">
+<ion-view cache-view="false">
+    <ion-nav-title>{{journal}} - comments</ion-nav-title>
     <ion-content>
         <ion-list>
-            <ion-item>Comments</ion-item>
+            <div class="list card" ng-repeat="child in child.children">
+            <ion-item class="feed-item item-avatar" type="item-text-wrap">
+                <img ng-src="{{child.$$userpic}}">
+                <h2>{{child.$$subject}}</h2>
+                <p><span>{{child.postername}}</span><span style="float: right">{{child.datepostunix}}</span></p>
+            </ion-item>
+            <ion-item class="item-body" ng-bind-html="child.$$body">
+            </ion-item>
+            </div>
         </ion-list>
     </ion-content>
 </ion-view>
-

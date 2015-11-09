@@ -2,13 +2,15 @@
 angular.module('PostCtrl', ['PostDrvs'])
 
 .controller('PostController', function($scope, $stateParams, $log, ngLJService, AuthService, TextService, AvatarService) {
+
+	var log = $log.context('PstCtrl');
     $scope.journal = $stateParams.journal;
     $scope.postId = $stateParams.postId;
     $scope.post = {};
     $scope.mode = 'journal';
         
     $scope.getPost = function() {
-        //log.debug('getPost');
+        log.debug('getPost');
 
         ngLJService.get_event(
             AuthService.get_username(),
