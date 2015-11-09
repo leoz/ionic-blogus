@@ -50,6 +50,16 @@ angular.module('MainRoute', [])
         }
     })
 
+    .state('app.journal-post-comments', {
+        url: '/journal/:journal/:postId/comments',
+        views: {
+            'menu-content': {
+                templateUrl: 'app/comments/view-comments.html',
+                controller: 'CommentsController'
+            }
+        }
+    })
+    
     .state('app.tab.journal', {
         url: '/journal/:journal',
         views: {

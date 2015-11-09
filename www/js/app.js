@@ -6,7 +6,7 @@ function shouldRotateToOrientation(degrees) {
 angular.module('ionicApp', ['ionic', 'ngLiveJournal',
     'AuthSrvc', 'AvatarSrvc', 'ConfSrvc', 'StorageSrvc', 'TextSrvc', 'UserSrvc',
     'MainRoute', 'AppCtrl', 'AppDrctv', 'MenuCtrl', 'BookmarksSrvc',
-    'FeedCtrl', 'PostCtrl', 'FriendsFeedCtrl', 'FavouritesCtrl',
+    'FeedCtrl', 'PostCtrl', 'CommentsCtrl', 'FriendsFeedCtrl', 'FavouritesCtrl',
     'MessagesSrvc', 'MessagesCtrl', 'MessageListCtrl', 'MessageViewCtrl' ])
 
 .run(function($ionicPlatform, ngLJService) {

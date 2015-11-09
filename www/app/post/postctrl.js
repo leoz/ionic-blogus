@@ -5,7 +5,8 @@ angular.module('PostCtrl', ['PostDrvs'])
     $scope.journal = $stateParams.journal;
     $scope.postId = $stateParams.postId;
     $scope.post = {};
-    
+    $scope.mode = 'journal';
+        
     $scope.getPost = function() {
         //log.debug('getPost');
 

@@ -26,7 +26,8 @@
                 <i class="icon ion-happy placeholder-icon"></i>
                 <span>{{post.props.$$current_mood}}</span>
             </ion-item>
-            <a class="item item-icon-left positive" href="#">
+            <a class="item item-icon-left positive"
+                href="#/app{{auth.get_logged_in() ? '/tab' : ''}}/{{mode}}/{{journal}}/{{post.itemid}}/comments">                   
                 <i class="icon ion-ios-chatboxes"></i> Comments
                 <span class="badge badge-positive">{{post.reply_count}}</span>
             </a>
